@@ -44,6 +44,7 @@ checkNEMlist <- function(NEMlist, CNOlist, parameters, approach, method) {
     }
     if (length(NEMlist$E0) == 0)  {
       egenes <- NEMlist$egenes
+      NEMlist$fc <- as.matrix(NEMlist$fc) #
       if (parameters$cutOffs[2] != 0) {
         NEMlist <- computeSm(CNOlist, NEMlist, parameters, method = method)
       }
