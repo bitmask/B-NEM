@@ -12,7 +12,7 @@ function (CNOlist,
   errorMult <- parameters$scoring[2] # multiplicator for mismatch of low degree
   zeroMult <- parameters$scoring[1]
   
-  CompMat <- CompMatCont
+  CompMat <- as.matrix(CompMatCont)  # XXX
   Epos <- CompMat
   Eneg <- CompMat
   E0 <- CompMat
